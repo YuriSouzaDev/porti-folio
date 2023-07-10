@@ -7,28 +7,37 @@
   <title>Yuri Souza • Portifólio</title>
   <meta name="description" content="Portifólio para apresentação de trabalhos de um desenvolvedor frontend junior">
   <link rel="stylesheet" href="./assests/css/style.css">
+  <script>
+    // PROTECT FROM JAVASCRIPT OFF
+    document.documentElement.className += "js"
+  </script>
 </head>
 
-<body class="light_theme">
+<body class="dark_theme">
 
   <!-- HEADER -->
 
-  <header class="header">
-    <div class="header-container container center-container">
+  <header class="header center-container js-header">
+    <div class="header-container container ">
       <div class="logo">
         <h1>YURI<span>SOUZA</span></h1>
       </div>
       <nav>
-        <ul class="menu">
+        <ul class="menu js-menu">
           <li><a href="#home">Início</a></li>
           <li><a href="#about">Sobre</a></li>
           <li><a href="#projetos">Projetos</a></li>
           <li><a href="#certificates">Certificados</a></li>
         </ul>
       </nav>
+      <div class="hamburger">
+        <span class="bar-one"></span>
+        <span class="bar-two"></span>
+        <span class="bar-three"></span>
+      </div>
       <div class="nav-detail"></div>
       <div class="mode-color">
-        <input type="checkbox" class="checkbox" id="checkbox">
+        <input type="checkbox" class="checkbox js-checkbox" id="checkbox" checked>
         <label for="checkbox" class="checkbox-label">
           <i class="bi bi-moon-fill"></i>
           <i class="bi bi-sun-fill"></i>
@@ -41,8 +50,8 @@
   <main>
     <!-- INTRODUCTION -->
 
-    <section class="intro" id="home">
-      <div class="intro-container center-container container">
+    <section class="intro center-container" id="home">
+      <div class="intro-container container">
         <div class="intro-text">
           <h1>Olá, visitante! <span>👋</span></h1>
           <h2>Meu nome é Yuri</h2>
@@ -75,8 +84,10 @@
           <img src="./assests/img/icons/curvy-arrow-illustration-by-Vexels.svg" alt="arrow for scroll">
         </div>
       </div>
-      </div>
     </section>
+
+    <!-- ABOUT -->
+    <section class="about" id="about"></section>
   </main>
 
   <script src="./assests/js/script.js"></script>
