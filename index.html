@@ -2,158 +2,294 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Yuri Souza • Portifólio</title>
-  <meta name="description" content="Portifólio para apresentação de trabalhos de um desenvolvedor frontend junior">
-  <link rel="stylesheet" href="./assests/css/style.css">
-  <script>
-    // PROTECT FROM JAVASCRIPT OFF
-    document.documentElement.className += "js"
-  </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yuri Souza • Portifólio</title>
+    <meta name="description" content="Portifólio para apresentação de trabalhos de um desenvolvedor frontend junior">
+    <link rel="stylesheet" href="./assests/css/style.css">
+    <script>
+        // PROTECT FROM JAVASCRIPT OFF
+        document.documentElement.className += "js"
+    </script>
 </head>
 
 <body class="dark_theme">
 
-  <!-- HEADER -->
+    <!-- HEADER -->
 
-  <header class="header center-container js-header">
-    <div class="header-container container ">
-      <div class="logo">
-        <h1>YURI<span>SOUZA</span></h1>
-      </div>
-      <nav>
-        <ul class="menu js-menu">
-          <li><a href="#home">Início</a></li>
-          <li><a href="#about">Sobre</a></li>
-          <li><a href="#projects">Projetos</a></li>
-          <li><a href="#certificates">Certificados</a></li>
-        </ul>
-      </nav>
-      <div class="hamburger">
-        <span class="bar-one"></span>
-        <span class="bar-two"></span>
-        <span class="bar-three"></span>
-      </div>
-      <div class="nav-detail"></div>
-      <div class="mode-color">
-        <input type="checkbox" class="checkbox js-checkbox" id="checkbox" checked>
-        <label for="checkbox" class="checkbox-label">
-          <i class="bi bi-moon-fill"></i>
-          <i class="bi bi-sun-fill"></i>
-          <span class="ball"></span>
-        </label>
-      </div>
-    </div>
-  </header>
-
-  <main>
-    <!-- INTRODUCTION -->
-
-    <section class="intro center-container" id="home">
-      <div class="intro-container container">
-        <div class="intro-text">
-          <h1>Olá, visitante! <span>👋</span></h1>
-          <h2>Meu nome é Yuri</h2>
-          <p>Desenvolvedor Front-end</p>
+    <header class="header center-container js-header">
+        <div class="header-container container ">
+            <div class="logo">
+                <h1>YURI<span>SOUZA</span></h1>
+            </div>
+            <nav>
+                <ul class="menu js-menu">
+                    <li><a href="#home">Início</a></li>
+                    <li><a href="#about">Sobre</a></li>
+                    <li><a href="#projects">Projetos</a></li>
+                    <li><a href="#contact">Contato</a></li>
+                </ul>
+            </nav>
+            <div class="hamburger">
+                <span class="bar-one"></span>
+                <span class="bar-two"></span>
+                <span class="bar-three"></span>
+            </div>
+            <div class="nav-detail"></div>
+            <div class="mode-color">
+                <input type="checkbox" class="checkbox js-checkbox" id="checkbox" checked>
+                <label for="checkbox" class="checkbox-label">
+                    <i class="bi bi-moon-fill"></i>
+                    <i class="bi bi-sun-fill"></i>
+                    <span class="ball"></span>
+                </label>
+            </div>
         </div>
-        <ul class="social-list">
-          <li>
-            <a href="#">
-              <i class="bi bi-linkedin"></i>
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <i class="bi bi-github"></i>
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <i class="bi bi-envelope"></i></i>
-            </a>
-          </li>
-        </ul>
-        <div class="scroll">
-          <h1>SCROLL</h1>
-          <picture>
-            <source media="(min-width: 960px)" srcset="./assests/img/icons/curvy-arrow.svg">
-            <img src="./assests/img/icons/arrow.svg" alt="arrow">
-          </picture>
+    </header>
+
+    <main>
+        <!-- INTRODUCTION -->
+
+        <section class="intro center-container" id="home">
+            <div class="intro-container container">
+                <div class="intro-text">
+                    <h1>Olá, visitante! <span>👋</span></h1>
+                    <h2>Meu nome é Yuri</h2>
+                    <p>Desenvolvedor Front-end</p>
+                </div>
+                <ul class="social-list">
+                    <li>
+                        <a href="#">
+                            <i class="bi bi-linkedin"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="bi bi-github"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="bi bi-envelope"></i></i>
+                        </a>
+                    </li>
+                </ul>
+                <div class="scroll">
+                    <h1>SCROLL</h1>
+                    <picture>
+                        <source media="(min-width: 960px)" srcset="./assests/img/icons/curvy-arrow.svg">
+                        <img src="./assests/img/icons/arrow.svg" alt="arrow">
+                    </picture>
+                </div>
+            </div>
+        </section>
+
+        <!-- ABOUT -->
+        <section class="about section" id="about">
+            <div class="container">
+                <div class="section-title">
+                    <p>SOBRE MIM</p>
+                    <h1>Conheça mais sobre mim</h1>
+                    <div class="title-detail">
+                        <div class="bar"></div>
+                        <div class="ball"></div>
+                        <div class="ball"></div>
+                        <div class="ball"></div>
+                    </div>
+                </div>
+                <div class="about-content">
+                    <div>
+                        <div class="about-text">
+                            <p>Sou um estudante de desenvolvimento fron-end que tem como umas das paixôes transmitir experiências incríveis e envolventes para os usuários. Sou um profissional autodidata e que estou sempre buscando me apefeiçoar e aprender novas tecnologias.</p>
+
+                            <p>Fui apresentado ao mundo de desenvolvimento por um professor, e desde então sempre amei esta área. E agora me sinto confiante para me buscar uma oportunidade no mercado de trabalho.</p>
+
+                            <p>Com experiências em projetos com uso de HTML, CSS, JavaScript. Com uma abordagem de desenvovilmento centrada no usuário, com interfaces intuitivas, atraentes e acessíveis buscando a melhor experiência do usuário nos mais diversos dispositivos.</p>
+                        </div>
+
+                    </div>
+                    <div class="slide">
+                        <div class="slide-item">
+                            <img src="./assests/img/icons/html.svg" alt="HTML icon">
+                            <p>HTML</p>
+                        </div>
+                        <div class="slide-item">
+                            <img src="./assests/img/icons/css.svg" alt="CSS icon">
+                            <p>CSS</p>
+                        </div>
+                        <div class="slide-item">
+                            <img src="./assests/img/icons/javascript.svg" alt="JavaScript icon">
+                            <p>JavaScript</p>
+                        </div>
+                        <div class="slide-item">
+                            <img src="./assests/img/icons/figma.svg" alt="Figma icon">
+                            <p>Figma</p>
+                        </div>
+                        <div class="slide-item">
+                            <img src="./assests/img/icons/sass.svg" alt="Sass icon">
+                            <p>Sass</p>
+                        </div>
+                        <div class="slide-item">
+                            <img src="./assests/img/icons/bootstrap.svg" alt="Bootstrap icon">
+                            <p>Bootstrap</p>
+                        </div>
+                    </div>
+                </div>
+                <h2>Continue me conhecendo através dos meus trabalhos abaixo...</h2>
+            </div>
+        </section>
+
+
+        <!-- PROJECTS -->
+        <section class="projects section" id="projects">
+            <div class="container">
+                <div class="section-title">
+                    <p>Meus trabalhos</p>
+                    <h1>Projetos</h1>
+                    <div class="title-detail">
+                        <div class="bar"></div>
+                        <div class="ball"></div>
+                        <div class="ball"></div>
+                        <div class="ball"></div>
+                    </div>
+                </div>
+                <div class="project-container">
+                    <!-- PROJECT 1 -->
+                    <div class="project-item">
+                        <div>
+                            <img src="./assests/img/fotos/bikcraft-projects.png" alt="bikcraft site">
+                        </div>
+                        <div class="project-content">
+                            <div class="project-text">
+                                <h2>Bikcraft</h2>
+                                <p>Projeto criando dentro de um dos cursos que fiz. Fiz algumas alterações para ficar mais único para um possível cliente.</p>
+                            </div>
+                            <div class="project-tec">
+                                <p>HTML</p>
+                                <p>CSS</p>
+                                <p>JavaScript</p>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/YuriSouzaDev/Bikcraft-repo" target="_blank">
+                                    <i class="bi bi-github"></i>
+                                </a>
+                                <a href="https://yurisouzadev.github.io/Bikcraft-repo/" target="_blank">Acessar site</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- PROJECT 2 -->
+                    <div class="project-item">
+                        <div>
+                            <img src="./assests/img/fotos/netflix-clone.png" alt="netflix - clone site">
+                        </div>
+                        <div class="project-content">
+                            <div class="project-text">
+                                <h2>Netflix - Clone</h2>
+                                <p>Clone do site netflix feito para aprimorar meus conhecimentos de html e css.</p>
+                            </div>
+                            <div class="project-tec">
+                                <p>HTML</p>
+                                <p>CSS</p>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/YuriSouzaDev/clone-netflix" target="_blank">
+                                    <i class="bi bi-github"></i>
+                                </a>
+                                <a href="https://yurisouzadev.github.io/clone-netflix/" target="_blank">Acessar site</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- PROJECT 3 -->
+                    <div class="project-item">
+                        <div>
+                            <img src="./assests/img/fotos/steam-redesign.png" alt="bikcraft site">
+                        </div>
+                        <div class="project-content">
+                            <div class="project-text">
+                                <h2>Steam - redesign</h2>
+                                <p>Redesign da página inicial do site da steam.</p>
+                            </div>
+                            <div class="project-tec">
+                                <p>HTML</p>
+                                <p>CSS</p>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/YuriSouzaDev/steam-redesign" target="_blank">
+                                    <i class="bi bi-github"></i>
+                                </a>
+                                <a href="https://yurisouzadev.github.io/steam-redesign/" target="_blank">Acessar site</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="contact section" id="contact">
+            <div class="container">
+                <div class="section-title">
+                    <p>Onde você pode me achar...</p>
+                    <h1>Contato</h1>
+                    <div class="title-detail">
+                        <div class="bar"></div>
+                        <div class="ball"></div>
+                        <div class="ball"></div>
+                        <div class="ball"></div>
+                    </div>
+                </div>
+                <div class="contact-container">
+                    <p>Aqui pode encontrar os principais meios de entrar em contato comigo.</p>
+                    <ul class="contact-list">
+                        <li>
+                            <a href="https://www.linkedin.com/in/-yuri-souza-dev/" target="_blank">
+                                <i class="bi bi-linkedin"></i>
+                                <span>Yuri Oliveira de Souza</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/YuriSouzaDev" target="_blank">
+                                <i class="bi bi-github"></i>
+                                <span>YuriSouzaDev</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="mailto:ysouza.dev@gmail.com" target="_blank">
+                                <i class="bi bi-envelope"></i></i>
+                                <span>ysouza.dev@gmail.com</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="footer container">
+            <div>
+                <ul class="footer-list">
+                    <li>
+                        <a href="#">
+                            <i class="bi bi-linkedin"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="bi bi-github"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="bi bi-envelope"></i></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div>© Todos os direitos reservados a Yuri Souza</div>
         </div>
-      </div>
-    </section>
+    </footer>
 
-    <!-- ABOUT -->
-    <section class="about container section" id="about">
-      <div class="section-title">
-        <p>SOBRE MIM</p>
-        <h1>Conheça mais sobre mim</h1>
-        <div class="title-detail">
-          <div class="bar"></div>
-          <div class="ball"></div>
-          <div class="ball"></div>
-          <div class="ball"></div>
-        </div>
-      </div>
-      <div class="about-content">
-        <div>
-          <div class="about-text">
-            <p>Sou um estudante de desenvolvimento fron-end que tem como umas das paixôes transmitir experiências incríveis e envolventes para os usuários. Sou um profissional autodidata e que estou sempre buscando me apefeiçoar e aprender novas tecnologias.</p>
-
-            <p>Fui apresentado ao mundo de desenvolvimento por um professor, e desde então sempre amei esta área. E agora me sinto confiante para me buscar uma oportunidade no mercado de trabalho.</p>
-
-            <p>Com experiências em projetos com uso de HTML, CSS, JavaScript. Com uma abordagem de desenvovilmento centrada no usuário, com interfaces intuitivas, atraentes e acessíveis buscando a melhor experiência do usuário nos mais diversos dispositivos.</p>
-          </div>
-
-        </div>
-        <div class="slide">
-          <div class="slide-item">
-            <img src="./assests/img/icons/html.svg" alt="HTML icon">
-            <p>HTML</p>
-          </div>
-          <div class="slide-item">
-            <img src="./assests/img/icons/css.svg" alt="CSS icon">
-            <p>CSS</p>
-          </div>
-          <div class="slide-item">
-            <img src="./assests/img/icons/javascript.svg" alt="JavaScript icon">
-            <p>JavaScript</p>
-          </div>
-          <div class="slide-item">
-            <img src="./assests/img/icons/figma.svg" alt="Figma icon">
-            <p>Figma</p>
-          </div>
-          <div class="slide-item">
-            <img src="./assests/img/icons/sass.svg" alt="Sass icon">
-            <p>Sass</p>
-          </div>
-          <div class="slide-item">
-            <img src="./assests/img/icons/bootstrap.svg" alt="Bootstrap icon">
-            <p>Bootstrap</p>
-          </div>
-        </div>
-      </div>
-      <h2>Continue me conhecendo através dos meus trabalhos abaixo...</h2>
-    </section>
-
-
-    <!-- PROJECTS -->
-    <section class="projects container section" id="projects">
-      <div class="section-title">
-        <p>PROJETOS</p>
-        <h1>Meus Trabalhos</h1>
-        <div class="title-detail">
-          <div class="bar"></div>
-          <div class="ball"></div>
-          <div class="ball"></div>
-          <div class="ball"></div>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <script src="./assests/js/script.js"></script>
+    <script src="./assests/js/script.js"></script>
 </body>
 
 </html>
