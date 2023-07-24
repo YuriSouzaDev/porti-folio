@@ -1,17 +1,40 @@
 "use strict";
 
+function initLogoChange() {
+  const logoH1 = document.querySelector(".logo h1");
+
+  if (window.matchMedia("(max-width:768px)").matches) {
+    logoH1.innerHTML = "Y<span>S</span>";
+  }
+}
+
+initLogoChange();
+
 function initMenuScroll() {
   const header = document.querySelector(".js-header");
 
   // CHANGE HEADER ON SCROLL
   window.addEventListener("scroll", () => {
     header.classList.toggle("ativo", scrollY > 100);
-    var scrollTop =
+    let scrollTop =
       document.documentElement.scrollTop || document.body.scrollTop;
   });
 }
 
 initMenuScroll();
+
+function initBackToTop() {
+  const backToTop = document.querySelector(".back-to-top");
+
+  // BACK TO TOP BUTTON
+  window.addEventListener("scroll", () => {
+    backToTop.classList.toggle("ativo", scrollY > 200);
+    let scrollTop =
+      document.documentElement.scrollTop || document.body.scrollTop;
+  });
+}
+
+initBackToTop();
 
 function initMenuHamburger() {
   const hamburger = document.querySelector(".hamburger");
@@ -98,3 +121,27 @@ function initColorMode() {
 }
 
 initColorMode();
+
+const sections = document.querySelectorAll(".js-scroll");
+
+function initAnimacaoScroll() {
+  // CREATE A ANIMATION ON SCROLL TO SHOW OR HIDE OBJECT
+  if (sections.length) {
+    const windowMetade = window.innerHeight * 0.7;
+
+    function animaScroll() {
+      sections.forEach((section) => {
+        const sectionTop = section.getBoundingClientRect().top;
+        const isSectionVisible = sectionTop - windowMetade < 0;
+        if (isSectionVisible) section.classList.add("ativo");
+        else section.classList.remove("ativo");
+      });
+    }
+
+    animaScroll();
+
+    window.addEventListener("scroll", animaScroll);
+  }
+}
+
+initAnimacaoScroll();
