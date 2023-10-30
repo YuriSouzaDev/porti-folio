@@ -570,8 +570,10 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  max-width: 600px;
+  max-width: 570px;
+  width: 100%;
   place-self: center;
+  flex: 1;
 }
 
 .project-image img {
