@@ -25,6 +25,16 @@ initMenuScroll();
 
 function initBackToTop() {
   const backToTop = document.querySelector(".back-to-top");
+  const hamburger = document.querySelector(".hamburger");
+  const navMenu = document.querySelector(".menu");
+
+  function closeMenu(e) {
+    e.preventDefault();
+    hamburger.classList.remove("active");
+    navMenu.classList.remove("active");
+  }
+
+  backToTop.addEventListener("click", closeMenu);
 
   // BACK TO TOP BUTTON
   window.addEventListener("scroll", () => {
