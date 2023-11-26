@@ -132,6 +132,80 @@ function initColorMode() {
 
 initColorMode();
 
+document.addEventListener("DOMContentLoaded", function () {
+  fetchProjects();
+});
+
+function fetchProjects() {
+  fetch("./projects.json")
+    .then((response) => response.json())
+    .then((projects) => displayProjects(projects))
+    .catch((error) => console.error("Erro ao carregar dados JSON:", error));
+}
+
+function displayProjects(projects) {
+  const projectsContainer = document.querySelector(".project-container");
+
+  projects.forEach((project) => {
+    const projectItem = document.createElement("div");
+    projectItem.classList.add("project-item");
+
+    const projectImage = document.createElement("div");
+    projectImage.classList.add("project-image");
+    const img = document.createElement("img");
+    img.src = project.img;
+    img.alt = project.nome + " - site clone";
+    projectImage.appendChild(img);
+
+    const projectContent = document.createElement("div");
+    projectContent.classList.add("project-content");
+    const h2 = document.createElement("h2");
+    h2.textContent = project.nome;
+    const p = document.createElement("p");
+    p.textContent = project.description;
+
+    const projectTec = document.createElement("div");
+    projectTec.classList.add("project-tec");
+    project.tecnologias.forEach((tecnologia) => {
+      const tec = document.createElement("p");
+      tec.textContent = tecnologia;
+      projectTec.appendChild(tec);
+    });
+
+    const projectLinks = document.createElement("div");
+    projectLinks.classList.add("project-links");
+
+    const linkProjeto = document.createElement("a");
+    linkProjeto.href = project.link;
+    linkProjeto.target = "_blank";
+    linkProjeto.textContent = "Ver projeto";
+    const imgLink = document.createElement("img");
+    imgLink.src = "./assests/img/icons/link-arrow.svg";
+    imgLink.alt = "";
+    linkProjeto.appendChild(imgLink);
+
+    const linkGithub = document.createElement("a");
+    linkGithub.href = project.github;
+    linkGithub.target = "_blank";
+    const iGithub = document.createElement("i");
+    iGithub.classList.add("bi", "bi-github");
+    linkGithub.appendChild(iGithub);
+
+    projectLinks.appendChild(linkProjeto);
+    projectLinks.appendChild(linkGithub);
+
+    projectContent.appendChild(h2);
+    projectContent.appendChild(p);
+    projectContent.appendChild(projectTec);
+    projectContent.appendChild(projectLinks);
+
+    projectItem.appendChild(projectImage);
+    projectItem.appendChild(projectContent);
+
+    projectsContainer.appendChild(projectItem);
+  });
+}
+
 const sections = document.querySelectorAll(".js-scroll");
 
 function initAnimacaoScroll() {
@@ -151,6 +225,7 @@ function initAnimacaoScroll() {
     animaScroll();
 
     window.addEventListener("scroll", animaScroll);
+    console.log("teste");
   }
 }
 
