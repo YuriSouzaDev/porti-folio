@@ -1,21 +1,21 @@
-"use strict";
+'use strict';
 
 function initLogoChange() {
-  const logoH1 = document.querySelector(".logo h1");
+  const logoH1 = document.querySelector('.logo h1');
 
-  if (window.matchMedia("(max-width:768px)").matches) {
-    logoH1.innerHTML = "Y<span>S</span>";
+  if (window.matchMedia('(max-width:768px)').matches) {
+    logoH1.innerHTML = 'Y<span>S</span>';
   }
 }
 
 initLogoChange();
 
 function initMenuScroll() {
-  const header = document.querySelector(".js-header");
+  const header = document.querySelector('.js-header');
 
   // CHANGE HEADER ON SCROLL
-  window.addEventListener("scroll", () => {
-    header.classList.toggle("ativo", scrollY > 100);
+  window.addEventListener('scroll', () => {
+    header.classList.toggle('ativo', scrollY > 100);
     let scrollTop =
       document.documentElement.scrollTop || document.body.scrollTop;
   });
@@ -24,21 +24,21 @@ function initMenuScroll() {
 initMenuScroll();
 
 function initBackToTop() {
-  const backToTop = document.querySelector(".back-to-top");
-  const hamburger = document.querySelector(".hamburger");
-  const navMenu = document.querySelector(".menu");
+  const backToTop = document.querySelector('.back-to-top');
+  const hamburger = document.querySelector('.hamburger');
+  const navMenu = document.querySelector('.menu');
 
   function closeMenu(e) {
     e.preventDefault();
-    hamburger.classList.remove("active");
-    navMenu.classList.remove("active");
+    hamburger.classList.remove('active');
+    navMenu.classList.remove('active');
   }
 
-  backToTop.addEventListener("click", closeMenu);
+  backToTop.addEventListener('click', closeMenu);
 
   // BACK TO TOP BUTTON
-  window.addEventListener("scroll", () => {
-    backToTop.classList.toggle("ativo", scrollY > 200);
+  window.addEventListener('scroll', () => {
+    backToTop.classList.toggle('ativo', scrollY > 200);
     let scrollTop =
       document.documentElement.scrollTop || document.body.scrollTop;
   });
@@ -47,23 +47,23 @@ function initBackToTop() {
 initBackToTop();
 
 function initMenuHamburger() {
-  const hamburger = document.querySelector(".hamburger");
-  const navMenu = document.querySelector(".menu");
+  const hamburger = document.querySelector('.hamburger');
+  const navMenu = document.querySelector('.menu');
   const linksIntenos = document.querySelectorAll(".js-menu a[href^='#']");
 
-  hamburger.addEventListener("click", () => {
-    hamburger.classList.toggle("active");
-    navMenu.classList.toggle("active");
+  hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('active');
+    navMenu.classList.toggle('active');
   });
 
   function closeMenu(e) {
     e.preventDefault();
-    hamburger.classList.remove("active");
-    navMenu.classList.remove("active");
+    hamburger.classList.remove('active');
+    navMenu.classList.remove('active');
   }
 
   linksIntenos.forEach((link) => {
-    link.addEventListener("click", closeMenu);
+    link.addEventListener('click', closeMenu);
   });
 }
 
@@ -73,7 +73,7 @@ function initSmoothScroll() {
   const menuItems = document.querySelectorAll('.js-menu a[href^="#"]');
 
   function getScrollTopByHref(element) {
-    const id = element.getAttribute("href");
+    const id = element.getAttribute('href');
     return document.querySelector(id).offsetTop;
   }
 
@@ -88,7 +88,7 @@ function initSmoothScroll() {
   }
 
   menuItems.forEach((item) => {
-    item.addEventListener("click", scrollToIdOnClick);
+    item.addEventListener('click', scrollToIdOnClick);
   });
   function smoothScrollTo(endX, endY, duration) {
     const startX = window.scrollX || window.pageXOffset;
@@ -97,7 +97,7 @@ function initSmoothScroll() {
     const distanceY = endY - startY;
     const startTime = new Date().getTime();
 
-    duration = typeof duration !== "undefined" ? duration : 400;
+    duration = typeof duration !== 'undefined' ? duration : 400;
 
     // Easing function
     const easeInOutQuart = (time, from, distance, duration) => {
@@ -122,73 +122,73 @@ initSmoothScroll();
 
 function initColorMode() {
   // CHANGE MODE COLOR
-  const checkbox = document.querySelector(".js-checkbox");
+  const checkbox = document.querySelector('.js-checkbox');
 
-  checkbox.addEventListener("change", () => {
-    document.body.classList.toggle("dark_theme");
-    document.body.classList.toggle("light_theme");
+  checkbox.addEventListener('change', () => {
+    document.body.classList.toggle('dark_theme');
+    document.body.classList.toggle('light_theme');
   });
 }
 
 initColorMode();
 
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener('DOMContentLoaded', function () {
   fetchProjects();
 });
 
 function fetchProjects() {
-  fetch("./projects.json")
+  fetch('./projects.json')
     .then((response) => response.json())
     .then((projects) => displayProjects(projects))
-    .catch((error) => console.error("Erro ao carregar dados JSON:", error));
+    .catch((error) => console.error('Erro ao carregar dados JSON:', error));
 }
 
 function displayProjects(projects) {
-  const projectsContainer = document.querySelector(".project-container");
+  const projectsContainer = document.querySelector('.project-container');
 
   projects.forEach((project) => {
-    const projectItem = document.createElement("div");
-    projectItem.classList.add("project-item");
+    const projectItem = document.createElement('div');
+    projectItem.classList.add('project-item');
 
-    const projectImage = document.createElement("div");
-    projectImage.classList.add("project-image");
-    const img = document.createElement("img");
+    const projectImage = document.createElement('div');
+    projectImage.classList.add('project-image');
+    const img = document.createElement('img');
     img.src = project.img;
-    img.alt = project.nome + " - site clone";
+    img.alt = project.nome + ' - site clone';
     projectImage.appendChild(img);
 
-    const projectContent = document.createElement("div");
-    projectContent.classList.add("project-content");
-    const h2 = document.createElement("h2");
+    const projectContent = document.createElement('div');
+    projectContent.classList.add('project-content');
+    const h2 = document.createElement('h2');
     h2.textContent = project.nome;
-    const p = document.createElement("p");
+    const p = document.createElement('p');
     p.textContent = project.description;
 
-    const projectTec = document.createElement("div");
-    projectTec.classList.add("project-tec");
+    const projectTec = document.createElement('div');
+    projectTec.classList.add('project-tec');
     project.tecnologias.forEach((tecnologia) => {
-      const tec = document.createElement("p");
+      const tec = document.createElement('p');
       tec.textContent = tecnologia;
       projectTec.appendChild(tec);
     });
 
-    const projectLinks = document.createElement("div");
-    projectLinks.classList.add("project-links");
+    const projectLinks = document.createElement('div');
+    projectLinks.classList.add('project-links');
 
-    const linkProjeto = document.createElement("a");
+    const linkProjeto = document.createElement('a');
     linkProjeto.href = project.link;
-    linkProjeto.target = "_blank";
-    linkProjeto.textContent = "Ver projeto";
-    const imgLink = document.createElement("img");
-    imgLink.src = "./assests/img/icons/link-arrow.svg";
-    imgLink.alt = "";
+    linkProjeto.target = '_blank';
+    linkProjeto.textContent = 'Ver projeto';
+    const imgLink = document.createElement('img');
+    imgLink.src = './assests/img/icons/link-arrow.svg';
+    imgLink.alt = '';
     linkProjeto.appendChild(imgLink);
 
-    const linkGithub = document.createElement("a");
+    const linkGithub = document.createElement('a');
     linkGithub.href = project.github;
-    linkGithub.target = "_blank";
-    const iGithub = document.createElement("i");
-    iGithub.classList.add("bi", "bi-github");
+    linkGithub.target = '_blank';
+    const iGithub = document.createElement('i');
+    iGithub.classList.add('bi', 'bi-github');
     linkGithub.appendChild(iGithub);
 
     projectLinks.appendChild(linkProjeto);
@@ -206,7 +206,7 @@ function displayProjects(projects) {
   });
 }
 
-const sections = document.querySelectorAll(".js-scroll");
+const sections = document.querySelectorAll('.js-scroll');
 
 function initAnimacaoScroll() {
   // CREATE A ANIMATION ON SCROLL TO SHOW OR HIDE OBJECT
@@ -217,15 +217,15 @@ function initAnimacaoScroll() {
       sections.forEach((section) => {
         const sectionTop = section.getBoundingClientRect().top;
         const isSectionVisible = sectionTop - windowMetade < 0;
-        if (isSectionVisible) section.classList.add("ativo");
-        else section.classList.remove("ativo");
+        if (isSectionVisible) section.classList.add('ativo');
+        else section.classList.remove('ativo');
       });
     }
 
     animaScroll();
 
-    window.addEventListener("scroll", animaScroll);
-    console.log("teste");
+    window.addEventListener('scroll', animaScroll);
+    console.log('teste');
   }
 }
 
