@@ -1,19 +1,10 @@
 [
   {
-    "nome": "Netflix",
-    "img": "./assests/img/fotos/netflix-clone.png",
-    "description": "Clone do site netflix feito para aprimorar meus conhecimentos de html e css.",
-    "tecnologias": ["HTML", "CSS"],
-    "link": "https://yurisouzadev.github.io/clone-netflix/",
-    "github": "https://github.com/YuriSouzaDev/clone-netflix"
-  },
-  {
-    "nome": "Steam",
-    "img": "./assests/img/fotos/steam-redesign.png",
-    "description": "Redesign da página inicial do site da steam.",
-    "tecnologias": ["HTML", "CSS"],
-    "link": "https://yurisouzadev.github.io/steam-redesign/",
-    "github": "https://github.com/YuriSouzaDev/steam-redesign"
+    "nome": "Ong é Por Amor",
+    "img": "./assests/img/fotos/ongporamor.png",
+    "description": "Site institucional feito como trabalho voluntário para uma ong do Rio de Janeiro",
+    "tecnologias": ["HTML", "CSS", "JavaScript", "Bootstrap"],
+    "link": "https://www.eporamor.org.br/"
   },
   {
     "nome": "Tabela FIPE",
@@ -27,23 +18,8 @@
     "nome": "Contador de palavras",
     "img": "./assests/img/fotos/contador-palavras.png",
     "description": "Contador de palavras com vogais, consoantes, numeros etc.",
-    "tecnologias": ["HTML", "CSS"],
+    "tecnologias": ["HTML", "CSS", "JavaScript"],
     "link": "https://yurisouzadev.github.io/contador-de-palavras/",
     "github": "https://github.com/YuriSouzaDev/contador-de-palavras"
-  },
-  {
-    "nome": "Esteticar",
-    "img": "./assests/img/fotos/esteticar.png",
-    "description": "Landing Page de um lava-jato para amostragem de serviços.",
-    "tecnologias": ["HTML", "CSS", "JavaScript", "Figma"],
-    "link": "https://esteticar.site/"
-  },
-  {
-    "nome": "Spotify Login",
-    "img": "./assests/img/fotos/spotify-login.png",
-    "description": "Redesign tela de login Spotify.",
-    "tecnologias": ["HTML", "CSS", "JavaScript", "Figma"],
-    "link": "https://yurisouzadev.github.io/login-scree-spotify/",
-    "github": "https://github.com/YuriSouzaDev/login-screen-spotify"
   }
 ]

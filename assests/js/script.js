@@ -183,16 +183,17 @@ function displayProjects(projects) {
     imgLink.src = './assests/img/icons/link-arrow.svg';
     imgLink.alt = '';
     linkProjeto.appendChild(imgLink);
-
-    const linkGithub = document.createElement('a');
-    linkGithub.href = project.github;
-    linkGithub.target = '_blank';
-    const iGithub = document.createElement('i');
-    iGithub.classList.add('bi', 'bi-github');
-    linkGithub.appendChild(iGithub);
-
     projectLinks.appendChild(linkProjeto);
-    projectLinks.appendChild(linkGithub);
+
+    if (project.github) {
+      const linkGithub = document.createElement('a');
+      linkGithub.href = project.github;
+      linkGithub.target = '_blank';
+      const iGithub = document.createElement('i');
+      iGithub.classList.add('bi', 'bi-github');
+      linkGithub.appendChild(iGithub);
+      projectLinks.appendChild(linkGithub);
+    }
 
     projectContent.appendChild(h2);
     projectContent.appendChild(p);
@@ -225,7 +226,6 @@ function initAnimacaoScroll() {
     animaScroll();
 
     window.addEventListener('scroll', animaScroll);
-    console.log('teste');
   }
 }
 
