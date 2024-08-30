@@ -7,19 +7,11 @@
     "link": "https://www.eporamor.org.br/"
   },
   {
-    "nome": "Tabela FIPE",
-    "img": "./assests/img/fotos/tabela-fipe.png",
-    "description": "Site para consulta de valores de veículos segundo a tabela FIPE brasileira.",
-    "tecnologias": ["HTML", "CSS", "JavaScript", "API Rest"],
-    "link": "https://yurisouzadev.github.io/tabela-fipe/",
-    "github": "https://github.com/YuriSouzaDev/tabela-fipe"
-  },
-  {
-    "nome": "Contador de palavras",
-    "img": "./assests/img/fotos/contador-palavras.png",
-    "description": "Contador de palavras com vogais, consoantes, numeros etc.",
-    "tecnologias": ["HTML", "CSS", "JavaScript"],
-    "link": "https://yurisouzadev.github.io/contador-de-palavras/",
-    "github": "https://github.com/YuriSouzaDev/contador-de-palavras"
+    "nome": "Massoli",
+    "img": "./assests/img/fotos/capa-massoli.png",
+    "description": "Landing page feita para treinar conhecimento em",
+    "tecnologias": ["HTML", "CSS"],
+    "link": "https://yurisouzadev.github.io/lp-massoli/",
+    "github": "https://github.com/YuriSouzaDev/lp-massoli"
   }
 ]
